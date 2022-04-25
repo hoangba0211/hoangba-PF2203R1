@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Caculator</h1>
+    <form>
+        <input type="text" id="a">
+        <input type="text" id="b">
+        =
+        <input type="text" id="c">
+    </form>
+    <br>
+    <button onclick="calulator('+')" class="add">Addition(+)</button>
+    <button onclick="calulator('-')" class="sub">Subtraction(-)</button>
+    <button onclick="calulator('*')" class="Mul">Multiplication(x)</button>
+    <button onclick="calulator('/')" class="Di">Division(/)</button>
+</body>
+<script>
+    var result = document.getElementById("c");
+    // function addition(){
+    //     let a = document.getElementById("a").value;
+    //     let b = document.getElementById("b").value;
+
+    //     result.value= parseInt(a) + parseInt(b) ;
+    // }
+
+    // function subtraction(){
+    //     let a = document.getElementById("a").value;
+    //     let b = document.getElementById("b").value;
+
+    //     result.value= parseInt(a) - parseInt(b) ;
+    // }
+
+    // function multiplication(){
+    //     let a = document.getElementById("a").value;
+    //     let b = document.getElementById("b").value;
+
+    //     result.value= parseInt(a) * parseInt(b) ;
+    // }
+
+    // function division(){
+    //     let a = document.getElementById("a").value;
+    //     let b = document.getElementById("b").value;
+
+    //     result.value= parseInt(a) / parseInt(b) ;
+    // }
+
+    function calulator(z) {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+
+        if (z == '+') {
+            result.value= parseInt(a) + parseInt(b) ;
+        }
+        else if(z == '-'){
+            result.value= parseInt(a) - parseInt(b) ;
+        }
+        else if(z == '*'){
+            result.value= parseInt(a) * parseInt(b) ;
+        }
+        else if(z == '/'){
+            result.value= parseInt(a) / parseInt(b) ;
+        }
+    }
+    // switch (z) {
+    //     case '+':
+    //         result.value= parseInt(a) + parseInt(b) ;
+    //         break;
+    //     case '-':
+    //         result.value= parseInt(a) - parseInt(b) ;
+    //         break;
+    //     case '*':
+    //         result.value= parseInt(a) * parseInt(b) ;
+    //         break;
+    //     case '/':
+    //         result.value= parseInt(a) / parseInt(b) ;
+    //         break;
+    
+    //     default:
+    //         break;
+    // }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Nhập số:
+        <input type="text" id="demo">
+        <button onclick="oddOrEven()">Kiểm tra</button>
+    </form>
+</body>
+<script>
+    
+    function oddOrEven() {
+        let demo = document.getElementById("demo").value;
+        if(parseInt(demo)%2 == 0) {
+            alert(demo + "là số chẳn");
+        }else{
+            alert(demo + "là số lẻ");
+        }
+    }
+</script>
+</html>

@@ -26,3 +26,4 @@ function area() {
     let S = r**2 * r
     document.getElementById('demo').innerHTML = "Chu vi hình tròn là:" + C + "<br>" + "Diện tích hình tròn là:" + S;
 }
+
