@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        Tên đăng nhập: <input type="text" id="user">
+        Mật khẩu: <input type="text" id="pass">
+        <button onclick="login()">Đăng nhập</button>
+        <h1 id="text"></h1>
+    </form> -->
+</body>
+<script>
+        let userName = prompt("Who's there?", '');
+        let pass = prompt('Password?', '');
+
+        if (userName == 'Admin') {
+            alert('Hãy nhập mk')
+        } else if (userName == null) {
+            alert('Canceled');
+        } else {
+            alert("I don't know you");
+        }
+
+
+        if (pass == 'TheMaster') {
+            alert('Welcome!');
+        } else if (pass == null) {
+            alert('Canceled.');
+        } else {
+            alert('Wrong password');
+        }
+
+    // function login() {
+        
+    //     if (name == 'Admin'){
+    //         alert('Hãy nhập mật khẩu');
+    //         if (pass == 'Themaster') {
+    //             document.getElementById('text').innerHTML = 'Welcom';
+    //         }else if(pass == null){
+    //             document.getElementById('text').innerHTML = 'Canceled';
+    //         }else {
+    //             document.getElementById('text').innerHTML = 'Wrong password';
+    //         }
+    //     }else if(name == null) {
+    //         document.getElementById('text').innerHTML = 'canceled';
+    //     }else {
+    //         document.getElementById('text').innerHTML = "I dont know you";
+    //     }
+    // }
+</script>
+</html>

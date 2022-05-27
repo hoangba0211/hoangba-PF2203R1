@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm ĐH khối D</h1>
+
+    <form>
+        Môn Toán: <input type="text" id="math"><br>
+        Môn Văn: <input type="text" id="lib"><br>
+        Môn Anh: <input type="text" id="eng"><br>
+        Khu vực: 
+        <select id="map" >
+            <option value="0.75">KV1</option>
+            <option value="0.5">KV2</option>
+            <option value="0.25">KV2-NT</option>
+            <option value="0">KV3</option>
+        </select><br>
+        <button onclick="sorces()" type="button">Tính điểm</button>
+    </form>
+
+    <h1 id="demo"></h1>
+</body>
+<script>
+    function sorces() {
+        let math = parseFloat(document.getElementById('math').value);
+        let lib = parseFloat(document.getElementById('lib').value);
+        let eng = parseFloat(document.getElementById('eng').value);
+        let map = parseFloat(document.getElementById('map').value);
+        document.getElementById('demo').innerHTML = math + lib + eng + map;
+
+    }
+</script>
+</html>

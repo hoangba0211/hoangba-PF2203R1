@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 250px;
+            background-color: #00FFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        p {
+            font-size: 36px;
+            color: #FFA500;
+        }
+        button {
+           padding: 10px;
+           border: 1px solid red;
+           background-color: #fff;
+           font-weight: bold;
+           font-size: 30px;
+           cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>Hãy đoán xem!</p>
+        <button onclick="gameStart()">Start</button>
+    </div>
+</body>
+<script>
+    // hàm chọn số ngẫu nhiên
+    
+    // hàm chơi game
+    function gameStart() {
+        let input1 = +prompt('Hãy nhập vào khoảng mà bạn sẽ dự đoán!');
+        let input2;
+        let number = Math.floor(Math.random() * input1 );
+        console.log(number);
+        let count = 0;
+        do {
+            input2 = +prompt('Hãy nhập vào số mà bạn cho là đúng!');
+                count += 1;
+                if(input2 == number){
+                    alert('Chúc mừng bạn đã chiến thắng');
+                }
+                else if(count == 3) 
+                alert('Bạn đã thua cuộc!');
+            
+        } while (input2 !== number || count == 3);
+    }
+</script>
+</html>

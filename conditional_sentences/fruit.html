@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="demo">
+    <button onclick="fruit()">Xem giá</button>
+
+    <p id="cost"></p>
+
+</body>
+<script>
+    function fruit() {
+        let fruit = document.getElementById('demo').value;
+
+        switch (fruit) {
+            case 'ổi':
+            case 'dưa hấu':
+                document.getElementById('cost').innerHTML = '20000 VNG/kg';
+                break;
+
+            case 'táo':
+            case 'xoài':
+                document.getElementById('cost').innerHTML = '30000 VNG/kg';
+                break;
+            
+            case 'cam':
+            case 'chôm chôm':
+                document.getElementById('cost').innerHTML = '40000 VNG/kg';
+                break;
+
+            case 'măng cụt':
+                document.getElementById('cost').innerHTML = '50000 VNG/kg';
+                break;
+        
+            default:
+                break;
+        }
+    }
+</script>
+</html>
