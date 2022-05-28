@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Bai1()">Bài 1</button>
+    <button onclick="Bai2()">Bài 2</button>
+    <button onclick="Bai3()">Bài 3</button>
+    <button onclick="Bai4()">Bài 4</button>
+    <button onclick="Bai5()">Bài 5</button>
+    <button onclick="Bai6()">Bài 6</button>
+    <button onclick="Bai7()">Bài 7</button>
+    <script>
+        // Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
+        function Bai1() {
+            let dem = 0;
+            while (dem < 100) {
+                document.write(dem) ;
+                dem += 1;
+            }
+            alert('Đã hoàn thành');
+        }
+        
+        // Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập. 
+        // Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+        function Bai2() {
+            let temp = +prompt('Hãy nhập nhiệt độ bạn mong muốn:');
+            do {
+                
+                if (temp >= 100){
+                    alert('Hãy giảm nhiệt độ xuống!');
+                    temp = +prompt('Hãy nhập nhiệt độ bạn mong muốn:');
+                }else if(temp <= 20){
+                    alert('Hãy tăng nhiệt độ lên');
+                    temp = +prompt('Hãy nhập nhiệt độ bạn mong muốn:');
+                }
+            } while (temp <= 20 || temp >= 100);
+        }
+
+        // Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên.
+        function Bai3 () {
+            let num = 20 ;
+            let num1 = 0;
+            let num2 = 1;
+            let count = 1;
+            let arr = []
+            while ( count < num) {
+                let result = (num1 + num2);
+                arr.push(result);
+                num1 = num2;
+                num2 = result;
+                count++;
+            }
+            document.write(arr);
+        }
+
+        // Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+        function Bai4() {
+            let num = 20 ;
+            let num1 = 0;
+            let num2 = 1;
+            let count = 1;
+            let result;
+            while ( count < num) {
+                result = (num1 + num2);
+                num1 = num2;
+                num2 = result;
+                count++;
+                if(result % 5 == 0) {
+                    count = num;
+                }
+            }
+            document.write("Số Fibonacci đầu tiên chia hết cho 5 là:" + result);
+        }
+
+        // Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+        function Bai5() {
+            let num = 20 ;
+            let num1 = 0;
+            let num2 = 1;
+            let count = 1;
+            let total = 0;
+            let result;
+            while ( count < num) {
+                result = (num1 + num2);
+                num1 = num2;
+                num2 = result;
+                total += result;
+                count++;
+                
+            }
+            document.write("Tổng 20 số Fanbocci đầu tiên là:" + total);
+        }
+        // Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+        function Bai6() {
+            let count = 0;
+            let total = 0;
+            do {
+                for (let i = 0; i < 1000; i++) {
+                    if (i % 7 == 0){
+                        total += i;
+                        count +=1;
+                    }
+
+                }
+            } while (count < 30);
+            document.write(total);
+        }
+
+        // Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100. 
+        // Nhưng nếu số chia hết cho 3 thì in ra “Fizz”, 5 thì in ra “Buzz” thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ “FizzBuzz”.
+        function Bai7() {
+            i = 1;
+            let output='';
+            while(i <= 100) {             
+                if (i % 3 == 0 && i % 5==0) {
+                    output = 'FizzBuzz'
+                    
+                }else if(i % 3 ==0) {
+                    output = 'Fizz'
+                }else if(i % 5 == 0) {
+                    output = 'Buzz'
+                }else{
+                    output =i;
+                }
+                i++;
+                document.write(output + "<br>");
+            }
+            
+        }
+    </script>
+</body>
+</html>
