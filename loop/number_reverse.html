@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let number = +prompt('Nhập vào một số bất kỳ:');
-        while (number > 0) {
-            
-        }
+            // let num = document.getElementById('num').value;
+            let num = prompt('Nhập một số bất kỳ');
+            let num1 = '';
+            while ((num / 10) != 0) {
+                num1 += num % 10;
+                num += Math.floor(num/10);
+            }
+            console.log(num1);
     </script>
 </body>
 </html>

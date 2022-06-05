@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Bài 1
+       var myColor = ['Red', 'Green', 'White', 'Black'];
+
+       function connectArray(arr) {
+           let newArray = arr.join(',');
+           return newArray;
+       }
+
+       console.log(connectArray(myColor));
+
+        // Bài 2
+        // var num = prompt('Nhập và dãy số bất kỳ');
+        // function connectNumberOdd(num) {
+        //     arr = []
+        //     for (let i = 0; i < num.length; i++) {
+        //         if (num[i-1]%2 == 0 && num[i]%2 == 0) {
+        //             arr.push('-',num[i])
+        //         }else {
+        //             arr.push(num[i])
+        //         } 
+        //     }
+        //     let newString = arr.join('').toString();
+        //     return newString;
+        // }
+        // console.log(connectNumberOdd(num));
+
+        // Bài 3
+        var str = prompt('Nhập vào câu bất kỳ');
+        function capitalization(str) {
+            let characters = [];
+            for (let i = 0; i < str.length; i++) {
+                if(str[i] == str[i].toUpperCase()) {
+                    characters.push(str[i].toLowerCase());
+
+                }else if(str[i] == str[i].toLowerCase()){
+                    characters.push(str[i].toUpperCase());
+                }
+            }
+            return characters.join('');
+        }
+        console.log(capitalization(str));
+
+    </script>
+</body>
+</html>
