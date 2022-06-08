@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="Canvas" width="500" height="600" style="border: 2px solid #000"></canvas> 
+    <script>
+        class myCircle {
+            radius 
+            x 
+            y 
+            constructor(x, y, radius) {
+                this.radius = radius;
+                this.x = x;
+                this.y = y;
+            }
+
+            getRadius() {
+                return this.radius;
+            }
+            setRadius(radius) {
+                this.radius = radius;
+            }
+            getArea() {
+                return Math.PI * this.radius * this.radius;
+            }
+            drawCircle() {
+                var tron = document.getElementById("Canvas").getContext("2d");
+                tron.beginPath();
+                tron.arc(this.x, this.y, this.radius, 0, 2 * Math.PI);
+                tron.fillStyle = 'red';
+                tron.fill();
+            }
+        }
+        let circle = new myCircle(50, 50, 80);
+        let area = circle.getArea();
+        console.log(area);
+        circle.setRadius(100);
+        console.log(circle.getArea());
+        circle.drawCircle()
+
+    </script>
+</body>
+</html>

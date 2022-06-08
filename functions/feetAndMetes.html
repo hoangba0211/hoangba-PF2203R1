@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+  <select id="from">
+      <option value="1">Foot</option>
+      <option value="0.305" >Meter</option>
+  </select>
+  To
+  <select id="to">
+    <option value="1">Foot</option>
+    <option value="0.305">Meter</option>
+</select>
+<button onclick="meterToFoot()">Exchange</button>
+  <p id="result"></p>
+    <script>
+        var button = document.getElementById('button');
+        
+        if(from == '1'){
+            button.onclick = 'footToMeter()';
+        }else if(from == '0.305') {
+            button.onclick = 'meterToFoot()';
+        }
+        
+        var from = document.getElementById('from').value;
+        var to = document.getElementById('to').value;
+        function footToMeter(){
+            let foot = document.getElementById('input').value;
+            let from = document.getElementById('from').value;
+            let  to = document.getElementById('to').value;
+            document.getElementById('result').innerHTML = (to / from )* foot;
+        }
+        function meterToFoot(){
+            let meter = document.getElementById('input').value;
+            let from = document.getElementById('from').value;
+            let  to = document.getElementById('to').value;
+            document.getElementById('result').innerHTML =   (to / from )* meter;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="Canvas" width="500" height="600" style="border: 2px solid #000"></canvas>
+    <script>
+        class Student {
+            name 
+            age 
+            gender 
+            pointMath 
+            pointPhysic 
+            pointChem
+
+            constructor(name, age, gender) {
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+            setPointMath(pointMath) {
+                this.pointMath = pointMath;
+            }
+            setPointPhysic(pointPhysic) {
+                this.pointPhysic = pointPhysic;
+            }
+            setPointChem(pointChem) {
+                this.pointChem = pointChem;
+            }
+            getAveragePoint() {
+                return (this.pointMath + this.pointPhysic + this.pointChem)/3;
+            }
+            setName(name){
+                this.name = name;
+            }
+
+        }
+        let student = new Student('Tú', 25, 'Male');
+        console.log(student);
+
+        student.setPointMath(7);
+        student.setPointPhysic(6);
+        student.setPointChem(8.5);
+        console.log(student.getAveragePoint());
+
+        student.setName('Nam');
+    </script>
+</body>
+</html>
